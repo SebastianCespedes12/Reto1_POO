@@ -1,5 +1,6 @@
 # Reto1_POO
 >1.Crear una función que realice operaciones básicas (suma, resta, multiplicación, división) entre dos números, según la elección del usuario, la forma de entrada de la función será los dos operandos y el caracter usado para la operación. entrada: (1,2,"+"), salida (3).
+
 Dependiendo del simbolo que el usuario elija se suma, resta, multiplica o divide.
 ```python
 def operaciones(x:float, y:float, simb:str) -> float:
@@ -22,6 +23,7 @@ if __name__ == "__main__":
     print(resultado)
 ```
 >2.Realice una función que permita validar si una palabra es un palíndromo. Condición: No se vale hacer slicing para invertir la palabra y verificar que sea igual a la original.
+
 Se recorre la palabra desde el primer caracter hasta la mitad (no es necesario iterar todos los caracteres) se compara con el ultimo caracter hasta llegar a la mitad, es decir, se compara el primer caracter con el ultimo, el segundo con el penultimo, etc. Si alguno no coincide no es un palindromo.
 ```python
 def palindromo(palabra: str) -> bool:
@@ -40,6 +42,7 @@ if __name__ == "__main__":
     print(segunda) # False
 ```
 >3.Escribir una función que reciba una lista de números y devuelva solo aquellos que son primos. La función debe recibir una lista de enteros y retornar solo aquellos que sean primos.
+
 Se recorre la lista, cada numero se divide por un rango de numeros entre 2 y la mitad de este, si el modulo de alguna division es 0 signfica que tiene un divisor distinto a 1 y a si mismo.
 ```python
 def reconocer_primo(lista: list):
@@ -64,6 +67,7 @@ if __name__ == "__main__":
     print(primos) # [2, 3, 17]
 ```
 >4.Escribir una función que reciba una lista de números enteros y retorne la mayor suma entre dos elementos consecutivos.
+
 Se recorre la lista y se guardan todas las sumas posibles en una lista, dicha lista se recorre para retornar la suma mas alta.
 ```python
 def suma_consecutiva(lista):
@@ -84,6 +88,7 @@ if __name__ == "__main__":
     print(max_suma) # 9
 ```
 >5.Escribir una función que reciba una lista de string y retorne unicamente aquellos elementos que tengan los mismos caracteres. e.g. entrada: ["amor", "roma", "perro"], salida ["amor", "roma"]
+
 Se recorre la lista y a cada string se cuenta su caracter y las veces que aparece, esto se añade a un diccionario. Despues se recorre el diccionario y si hay dos palabras con la misma cuenta se agregan a la lista final.
 ```python
 def mismos_caracteres(lista:list):
